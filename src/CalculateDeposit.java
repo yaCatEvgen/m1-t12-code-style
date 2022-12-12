@@ -13,12 +13,12 @@ public class CalculateDeposit {
         return valueDegree(newAmount, 2);
     }
 
-    double valueDegree(double value, int places) {
+    double valueDegree(double value, int places) { //метод округляет значение суммы до 'places' знаков за запятой: я бы указала это в названии
         double result = Math.pow(10, places);
         return Math.round(value * result) / result;
     }
 
-    void printUserInputAndCalculate() {
+    void printUserInputAndCalculate() { // отличное название! мое хромает тут) хотя, сам метод вызывает сомнения своей многосложностью смыслов
         Scanner scanner = new Scanner(System.in);
         double deposit = 0;
         int period;
